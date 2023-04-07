@@ -13,4 +13,4 @@ extern "C" void gaussianBlur();
 
 extern "C" int getVersion();
 
-#endif //FLUTTER_OPENCV_FFI_H
+#endif // FLUTTER_OPENCV_FFI_H

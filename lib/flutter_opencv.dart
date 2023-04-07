@@ -1,4 +1,3 @@
-
 import 'package:ffi/ffi.dart';
 
 import 'flutter_opencv_platform_interface.dart';
