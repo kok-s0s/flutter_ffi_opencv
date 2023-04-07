@@ -42,6 +42,13 @@ android {
 
     defaultConfig {
         minSdkVersion 16
+
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
     }
 
     externalNativeBuild {
