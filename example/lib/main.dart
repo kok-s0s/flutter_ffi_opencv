@@ -4,7 +4,11 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:flutter_opencv/flutter_opencv.dart';
 
+import 'package:ffi/ffi.dart';
+
 void main() {
+  gaussianBlur();
+
   runApp(const MyApp());
 }
 

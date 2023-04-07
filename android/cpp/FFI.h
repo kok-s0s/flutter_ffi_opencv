@@ -5,9 +5,12 @@
 #ifndef FLUTTER_OPENCV_FFI_H
 #define FLUTTER_OPENCV_FFI_H
 
-extern "C"
-{
-    int getVersion();
-}
+#include <opencv2/opencv.hpp>
+
+using namespace cv;
+
+extern "C" void gaussianBlur();
+
+extern "C" int getVersion();
 
 #endif //FLUTTER_OPENCV_FFI_H
