@@ -10,10 +10,10 @@ class FlutterOpencv {
   }
 }
 
-final DynamicLibrary oceanUltraLib = Platform.isAndroid
+final DynamicLibrary _opencvLib = Platform.isAndroid
     ? DynamicLibrary.open("libcvPlugin.so")
     : DynamicLibrary.process();
 
-final int Function() getVersion = oceanUltraLib
+final int Function() getVersion = _opencvLib
     .lookup<NativeFunction<Int Function()>>("getVersion")
     .asFunction();
