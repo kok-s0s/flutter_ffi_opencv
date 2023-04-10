@@ -4,6 +4,10 @@
 
 #include "FFI.h"
 
+#include <string>
+
+Cxx *cxx = Cxx::getInstance(); // Singleton
+
 void gaussianBlur() {
   // const char* inputPath, const char* outputPath
   Mat src =
@@ -19,4 +23,26 @@ void gaussianBlur() {
           dst);
 }
 
-int getVersion() { return 2; }
+int getVersion() { return 3; }
+
+void setPersonName(char *name) {
+  std::string tempName = name;
+  cxx->setName(tempName);
+}
+
+char *getPersonName() {
+  std::string *tempName = cxx->getName();
+  return (char *)tempName->c_str();
+}
+
+void setPersonAge(int age) { cxx->setAge(age); }
+
+int getPersonAge() { return cxx->getAge(); }
+
+void setPersonWeight(double weight) { cxx->setWeight(weight); }
+
+double getPersonWeight() { return cxx->getWeight(); }
+
+void setPersonHeight(double height) { cxx->setHeight(height); }
+
+double getPersonHeight() { return cxx->getHeight(); }

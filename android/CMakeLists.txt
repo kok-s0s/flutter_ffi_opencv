@@ -12,6 +12,8 @@ set_target_properties(libopencv_java4 PROPERTIES IMPORTED_LOCATION
 add_library(${PROJECT_NAME}
     SHARED
     cpp/FFI.cpp
+    cpp/Cxx.cpp
+    cpp/Person.cpp
 )
 
 find_library(

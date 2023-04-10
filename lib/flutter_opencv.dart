@@ -19,10 +19,38 @@ final void Function() gaussianBlur = _opencvLib
     .lookup<NativeFunction<Void Function()>>("gaussianBlur")
     .asFunction();
 
-// final void Function(Pointer<Utf8>, Pointer<Utf8>) gaussianBlur = _opencvLib
-//     .lookup<NativeFunction<Void Function(Pointer<Utf8> inputPath, Pointer<Utf8> outputPath)>>("gaussianBlur")
-//     .asFunction();
-
 final int Function() getVersion = _opencvLib
     .lookup<NativeFunction<Int Function()>>("getVersion")
+    .asFunction();
+
+final void Function(Pointer<Int8> name) setPersonName = _opencvLib
+    .lookup<NativeFunction<Void Function(Pointer<Int8> name)>>("setPersonName")
+    .asFunction();
+
+final Pointer<Int8> Function() getPersonName = _opencvLib
+    .lookup<NativeFunction<Pointer<Int8> Function()>>("getPersonName")
+    .asFunction();
+
+final void Function(int age) setPersonAge = _opencvLib
+    .lookup<NativeFunction<Void Function(Int32 age)>>("setPersonAge")
+    .asFunction();
+
+final int Function() getPersonAge = _opencvLib
+    .lookup<NativeFunction<Int Function()>>("getPersonAge")
+    .asFunction();
+
+final void Function(double weight) setPersonWeight = _opencvLib
+    .lookup<NativeFunction<Void Function(Double weight)>>("setPersonWeight")
+    .asFunction();
+
+final double Function() getPersonWeight = _opencvLib
+    .lookup<NativeFunction<Double Function()>>("getPersonWeight")
+    .asFunction();
+
+final void Function(double height) setPersonHeight = _opencvLib
+    .lookup<NativeFunction<Void Function(Double weight)>>("setPersonHeight")
+    .asFunction();
+
+final double Function() getPersonHeight = _opencvLib
+    .lookup<NativeFunction<Double Function()>>("getPersonHeight")
     .asFunction();
