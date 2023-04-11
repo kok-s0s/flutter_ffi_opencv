@@ -1,15 +1,7 @@
-# flutter_opencv
+# flutter_ffi_opencv
 
-A new Flutter project.
+本项目是一个使用 Flutter 和 FFI 技术调用 OpenCV C++ 库的示例代码。
 
-## Getting Started
+其中 OpenCV 库的配置过程可通过查看 Git commit 信息来了解。
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+示例代码实践了 FFI 库技术提供的数据结构转换（Dart 和 C 互转），如整型、字符串和结构体等。
