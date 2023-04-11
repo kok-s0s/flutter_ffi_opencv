@@ -6,8 +6,6 @@
 
 #include <string>
 
-Cxx *cxx = Cxx::getInstance(); // Singleton
-
 void gaussianBlur() {
   // const char* inputPath, const char* outputPath
   Mat src =
@@ -25,7 +23,21 @@ void gaussianBlur() {
 
 int getVersion() { return 3; }
 
+Cxx *cxx = Cxx::getInstance(); // Singleton
+auto *person = (Person *) new Person;
+
+Person *init()
+{
+  std::string* tempName = cxx->getName();
+  person->name = (char*)tempName->c_str();
+  person->age = cxx->getAge();
+  person->weight = cxx->getWeight();
+  person->height = cxx->getHeight();
+  return person;
+}
+
 void setPersonName(char *name) {
+  person->name = name;
   std::string tempName = name;
   cxx->setName(tempName);
 }
@@ -35,14 +47,23 @@ char *getPersonName() {
   return (char *)tempName->c_str();
 }
 
-void setPersonAge(int age) { cxx->setAge(age); }
+void setPersonAge(int age) {
+  person->age = age;
+  cxx->setAge(age);
+}
 
 int getPersonAge() { return cxx->getAge(); }
 
-void setPersonWeight(double weight) { cxx->setWeight(weight); }
+void setPersonWeight(double weight) {
+  person->weight = weight;
+  cxx->setWeight(weight);
+}
 
 double getPersonWeight() { return cxx->getWeight(); }
 
-void setPersonHeight(double height) { cxx->setHeight(height); }
+void setPersonHeight(double height) {
+  person->height = height;
+  cxx->setHeight(height);
+}
 
 double getPersonHeight() { return cxx->getHeight(); }

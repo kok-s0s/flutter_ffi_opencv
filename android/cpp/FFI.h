@@ -15,6 +15,15 @@ extern "C" void gaussianBlur();
 
 extern "C" int getVersion();
 
+extern "C" typedef struct {
+    char * name;
+    int age;
+    double weight;
+    double height;
+} Person;
+
+extern "C" Person *init();
+
 extern "C" void setPersonName(char *name);
 
 extern "C" char *getPersonName();

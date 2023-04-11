@@ -13,7 +13,6 @@ add_library(${PROJECT_NAME}
     SHARED
     cpp/FFI.cpp
     cpp/Cxx.cpp
-    cpp/Person.cpp
 )
 
 find_library(

@@ -1,4 +1,3 @@
-#include "Person.h"
 #include <string>
 
 class Cxx {
@@ -7,7 +6,10 @@ private:
   Cxx(const Cxx &) = delete;
   Cxx &operator=(const Cxx &) = delete;
   Cxx();
-  Person *m_person;
+  std::string m_name;
+  int m_age;
+  double m_weight;
+  double m_height;
 
 public:
   static Cxx *getInstance();

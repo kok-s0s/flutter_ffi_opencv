@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+    init();
     super.initState();
     controller = TextEditingController();
     controller.addListener(() {});

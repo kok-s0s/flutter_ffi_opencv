@@ -23,6 +23,23 @@ final int Function() getVersion = _opencvLib
     .lookup<NativeFunction<Int Function()>>("getVersion")
     .asFunction();
 
+class Person extends Struct {
+  external Pointer<Int8> name;
+
+  @Int32()
+  external int age;
+
+  @Double()
+  external double weight;
+
+  @Double()
+  external double height;
+}
+
+final Pointer<Person> Function() init = _opencvLib
+    .lookup<NativeFunction<Pointer<Person> Function()>>("init")
+    .asFunction();
+
 final void Function(Pointer<Int8> name) setPersonName = _opencvLib
     .lookup<NativeFunction<Void Function(Pointer<Int8> name)>>("setPersonName")
     .asFunction();
